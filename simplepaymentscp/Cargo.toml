@@ -1,0 +1,25 @@
+[package]
+name = "ark-simple-payments-scp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ark-crypto-primitives = { version = "0.4.0", default-features = false, features = ["merkle_tree", "sponge", "crh", "prf", "r1cs", "signature"] }
+ark-groth16 = { version = "^0.4.0"}
+ark-relations = { version = "0.4.0" }
+ark-ed-on-bls12-381 = { version = "0.4.0", features = ["r1cs"] }
+ark-r1cs-std = { version = "0.4.0" }
+ark-std = { version = "0.4.0" }
+ark-bls12-381 = { version = "0.4.0" }
+derivative = { version = "2.0", features = ["use_core"] }
+ark-ec = { version = "0.4.2" }
+ark-ff = { version = "0.4.2" }
+ark-serialize = { version = "0.4", features = ["derive"] }
+sha2 = { version = "0.10.8" }
+blake2 = { version = "0.10.6" }
+digest = "0.10.7"
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+serde_with = { version = "1.10.0", default-features = false, features = ["macros"] }
+bytes = "1.5.0"

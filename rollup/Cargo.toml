@@ -1,0 +1,26 @@
+[package]
+name = "ark-rollup"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ark-ec = { version = "0.4.2" }
+ark-ff = { version = "0.4.2" }
+ark-ed-on-bls12-381 = { version = "^0.4.0"}
+ark-bls12-381 = { version = "0.4.0" }
+ark-std = { version = "0.4.0" }
+ark-relations = { version = "0.4.0" }
+
+ark-r1cs-std = { version = "0.4.0" }
+ark-snark = { version = "^0.4.0", default-features = false }
+ark-groth16 = { version = "^0.4.0"}
+
+ark-serialize = { version = "0.4", features = ["derive"] }
+
+ark-crypto-primitives = { version = "0.4.0", default-features = false, features = ["merkle_tree", "sponge", "crh", "r1cs", "signature"] }
+ark-simple-payments-scp = { path = "../simplepaymentscp", default-features = true }
+blake2 = { version = "0.10.6" }
+digest = "0.10.7"
+tracing = { version = "0.1", default-features = false, features = [ "attributes" ] }
+derivative = { version = "2.0", features = ["use_core"] }
+sha2 = { version = "0.10.8" }
